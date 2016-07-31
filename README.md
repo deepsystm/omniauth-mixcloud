@@ -7,7 +7,7 @@ This gem contains the MixcloudCloud strategy for OmniAuth 1.0.
 Add to your `Gemfile`:
 
 ```ruby
-gem 'omniauth-mixcloud'
+gem 'omniauth-mixcloud', github: 'deepsystm/omniauth-mixcloud'
 ```
 
 Then `bundle install`.
@@ -17,6 +17,12 @@ Then `bundle install`.
     use OmniAuth::Builder do
     	provider "mixcloud", ENV['MIXCLOUD_CLIENT_ID'], ENV['MIXCLOUD_SECRET']
     end
+    
+Add to `config/initializers/devise.rb`
+
+    config.omniauth :mixcloud, 
+        Rails.application.secrets.mixcloud_id, 
+        Rails.application.secrets.mixcloud_secret
 
 ## Supported Flows
 
