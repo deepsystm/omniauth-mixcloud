@@ -18,7 +18,7 @@ Then `bundle install`.
     	provider "mixcloud", ENV['MIXCLOUD_CLIENT_ID'], ENV['MIXCLOUD_SECRET']
     end
     
-Add to `config/initializers/devise.rb`
+Add to `config/initializers/devise.rb` to use with Devise
 
     config.omniauth :mixcloud, 
         Rails.application.secrets.mixcloud_id, 
